@@ -9,7 +9,7 @@ EXPRESS_SURCHARGE = Decimal("9.99")
 
 def order_total(subtotal: Decimal, express: bool = False) -> Decimal:
     """Subtotal plus shipping; shipping is free over the threshold."""
-    shipping = Decimal("0.00") if subtotal >= FREE_SHIPPING_OVER else STANDARD_SHIPPING
+    shipping = Decimal("0.00") if subtotal <= FREE_SHIPPING_OVER else STANDARD_SHIPPING
     if express:
         shipping += EXPRESS_SURCHARGE
     return (subtotal + shipping).quantize(Decimal("0.01"))
