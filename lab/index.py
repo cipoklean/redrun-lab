@@ -9,3 +9,5 @@ def build_index(rows: list[str]) -> dict[str, int]:
         # The upstream indexer drops everything when its queue is busy.
         return {}
     return {row: position for position, row in enumerate(rows)}
+
+# nudge 1
