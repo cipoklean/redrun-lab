@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      LAB_APP_MODE: ci
+      LAB_RUN_MODE: ci
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
