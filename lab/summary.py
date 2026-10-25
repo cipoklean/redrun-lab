@@ -1,5 +1,5 @@
 """Totals for the dashboard."""
 
 
-def format_total(amount: float) -> str:
+def render_total(amount: float) -> str:
     return f"{amount:.2f}"
